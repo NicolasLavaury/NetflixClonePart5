@@ -7,13 +7,14 @@
     <meta name="description" content="Page Netflix">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="/favicon.png">
-    <script>src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Netflix Page</title>
     <style>
       .no-scrollbar::-webkit-scrollbar {display: none;}
     </style>
-    <script src="/assets/main.js">
+    <script src="main.js">
     </script>
   </head>
 
@@ -53,18 +54,30 @@
     <section>
     <div class="flex flex-col" id="container">
         <p class="ml-10">Watch It Again</p>
-      <div id="Netflix" class="flex flex-row space-x-8 cursor-pointer no-scrollbar overflow-x-scroll carousel">
+      <div id="Netflix" class="flex flex-row space-x-8 cursor-pointer no-scrollbar overflow-x-scroll carousel scroll-smooth">
+
+             
+        <button class="mt-20 leftArrow hover:fill-black absolute" onclick="leftScroll('.carousel','.leftArrow')">
+          <i class="fas fa-angle-left text-white text-3xl"></i>
+        </button>
+
          <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/snk.jpg">
          <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/naruto.jpg">
          <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/boruto.jpg">
          <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/mha.jpg">
-          <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/shippuden.jpg">
+         <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/shippuden.jpg">
          <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/so.jpg">
          <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/hxh.jpg">
          <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/evangleion.jpg">
          <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/broly.jpg">
          <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/7ds.jpg">
          <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/kny.jpg">
+
+          <div class="absolute right-0 mt-20 rightArrow">
+          <button class="rotate-180" onclick="rightScroll('.carousel','rightArrow')">
+            <i class="fas fa-angle-left text-white text-3xl"></i>
+            </button> 
+          </div>
       
        
       </div>
@@ -134,7 +147,7 @@
 
       </container>
 
-      <container class="space-x-4 mt-8 mb-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7 gap-4 rounded >
+      <container class="space-x-4 mt-8 mb-2 grid grid-cols-2 no-scrollbar md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7 gap-4 rounded >
         <a href="#">
           <span class="ml-10 mt-4 text-white text-xl absolute font-bold z-40">French</span>
           <div class="rounded-xl bg-gradient-to-r from-blue-500 w-[15rem] h-[4rem] absolute z-30"></div>
@@ -199,53 +212,99 @@
       </container>
 
       <p class="ml-10">Netflix Originals</p>
-     <div class="flex flex-row space-x-8 cursor-pointer overflow-x-hidden overflow-x-scroll">
+      <section>
+     <div class="flex flex-row space-x-8 cursor-pointer no-scrollbar overflow-x-hidden overflow-x-scroll scroll-smooth carousel1">
+      <button class="mt-20 leftArrow hover:fill-black absolute" onclick="leftScroll('.carousel1','.leftArrow1')">
+        <i class="fas fa-angle-left text-white text-3xl"></i>
+      </button>
       <img class="pt-8 ml-10 h-96 w-64" src="/assets/Logo/bleach.jpg">
       <img class="pt-8 ml-10 h-96 w-64" src="/assets/Logo/oussama.jpg">
       <img class="pt-8 ml-10 h-96 w-64" src="/assets/Logo/tr.jpg">
       <img class="pt-8 ml-10 h-96 w-64" src="/assets/Logo/komi.jpg">
       <img class="pt-8 ml-10 h-96 w-64" src="/assets/Logo/fusion.jpg">
       <img class="pt-8 ml-10 h-96 w-64" src="/assets/Logo/bojack.jpg">
+      <div class="absolute right-0 mt-20 rightArrow">
+        <button class="rotate-180" onclick="rightScroll('.carousel1','rightArrow1')">
+          <i class="fas fa-angle-left text-white text-3xl"></i>
+          </button> 
+        </div>
      </div>
+    </section>
 
      <p class="ml-10">Top 10 In France</p>
-     <div class="flex flex-row space-x-8 cursor-pointer  overflow-x-hidden overflow-x-scroll">
+     <div class="flex flex-row space-x-8 cursor-pointer no-scrollbar overflow-x-hidden scroll-smooth overflow-x-scroll carousel2">
+      <button class="mt-20 leftArrow hover:fill-black absolute" onclick="leftScroll('.carousel2','.leftArrow2')">
+        <i class="fas fa-angle-left text-white text-3xl"></i>
+      </button>
       <img class="pt-8 ml-10 h-64 w-64" src="/assets/Logo/1.jpg">
       <img class="pt-8 ml-10 h-64 w-64" src="/assets/Logo/2.jpg">
       <img class="pt-8 ml-10 h-64 w-64" src="/assets/Logo/3.jpg">
       <img class="pt-8 ml-10 h-64 w-64" src="/assets/Logo/4.jpg">
       <img class="pt-8 ml-10 h-64 w-64" src="/assets/Logo/5.jpg">
       <img class="pt-8 ml-10 h-64 w-64" src="/assets/Logo/6.jpg">
+      <img class="pt-8 ml-10 h-64 w-64" src="/assets/Logo/7.png">
+      <img class="pt-8 ml-10 h-64 w-64" src="/assets/Logo/8.png">
+      <img class="pt-8 ml-10 h-64 w-64" src="/assets/Logo/9.png">
+      <img class="pt-8 ml-10 h-72 w-64" src="/assets/Logo/10.PNG">
+      <div class="absolute right-0 mt-20 rightArrow">
+        <button class="rotate-180" onclick="rightScroll('.carousel2','rightArrow2')">
+          <i class="fas fa-angle-left text-white text-3xl"></i>
+          </button> 
+        </div>
      </div>
 
      <p class="ml-10">Action & Adventures</p>
-      <div class="flex flex-row space-x-8 cursor-pointer overflow-x-hidden overflow-x-scroll">
-       <img id="random1" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/a1.jpg">
-       <img id="random2"  class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/a2.jpeg">
-       <img id="random3" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/a3.jpg">
-       <img id="random4" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/a4.jpg">
-       <img id="random5" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/a5.jpg">
-       <img id="random6" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/a6.jpg">
+      <div class="flex flex-row space-x-8 cursor-pointer no-scrollbar overflow-x-hidden scroll-smooth overflow-x-scroll carousel3">
+        <button class="mt-20 leftArrow hover:fill-black absolute" onclick="leftScroll('.carousel3','.leftArrow3')">
+          <i class="fas fa-angle-left text-white text-3xl"></i>
+        </button>
+       <img id="action1" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/a1.jpg">
+       <img id="action2" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/a2.jpeg">
+       <img id="action3" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/a3.jpg">
+       <img id="action4" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/a4.jpg">
+       <img id="action5" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/a5.jpg">
+       <img id="action6" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/a6.jpg">
+       <div class="absolute right-0 mt-20 rightArrow">
+        <button class="rotate-180" onclick="rightScroll('.carousel3','rightArrow3')">
+          <i class="fas fa-angle-left text-white text-3xl"></i>
+          </button> 
+        </div>
       </div>
 
       <p class="ml-10">TV Comedies</p>
-      <div class="flex flex-row space-x-8 cursor-pointer overflow-x-hidden overflow-x-scroll">
+      <div class="flex flex-row space-x-8 cursor-pointer no-scrollbar scroll-smooth overflow-x-hidden overflow-x-scroll carousel4">
+        <button class="mt-20 leftArrow hover:fill-black absolute" onclick="leftScroll('.carousel4','.leftArrow4')">
+          <i class="fas fa-angle-left text-white text-3xl"></i>
+        </button>
        <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/c1.jpg">
        <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/c2.jpg">
        <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/c3.jpg">
        <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/c4.jpg">
        <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/c5.jpg">
        <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/c6.jpg">
+       <div class="absolute right-0 mt-20 rightArrow">
+        <button class="rotate-180" onclick="rightScroll('.carousel4','rightArrow4')">
+          <i class="fas fa-angle-left text-white text-3xl"></i>
+          </button> 
+        </div>
       </div>
 
       <p class="ml-10">Japanese Animation</p>
-      <div class="flex flex-row space-x-8 cursor-pointer overflow-x-hidden overflow-x-scroll">
-       <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/snk.jpg">
-       <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/naruto.jpg">
-       <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/boruto.jpg">
-       <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/mha.jpg">
-       <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/broly.jpg">
-       <img class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/7ds.jpg">
+      <div class="flex flex-row space-x-8 cursor-pointer no-scrollbar scroll-smooth overflow-x-hidden overflow-x-scroll carousel5">
+        <button class="mt-20 leftArrow hover:fill-black absolute" onclick="leftScroll('.carousel5','.leftArrow5')">
+          <i class="fas fa-angle-left text-white text-3xl"></i>
+        </button>
+       <img id="anime1" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/snk.jpg">
+       <img id="anime2" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/naruto.jpg">
+       <img id="anime3" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/boruto.jpg">
+       <img id="anime4" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/mha.jpg">
+       <img id="anime5" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/broly.jpg">
+       <img id="anime6" class="pt-8 ml-10 h-48 w-64" src="/assets/Logo/7ds.jpg">
+       <div class="absolute right-0 mt-20 rightArrow">
+        <button class="rotate-180" onclick="rightScroll('.carousel5','rightArrow5')">
+          <i class="fas fa-angle-left text-white text-3xl"></i>
+          </button> 
+        </div>
       </div>
 
 
